@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    margin-top: 50px;
+    margin-right: 300px;
+}
+
+.block{
+    width: 225px;
+    height: 225px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: blue;
+
+    border-radius: 200px;
+
+
+    animation-name: phone;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.fa-solid, .fa-phone-flip{
+    color: white;
+
+    font-size: 100px;
+
+    animation-name: phone_rotate;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes phone{
+    
+    0%{
+
+    }
+
+    25%{
+        box-shadow: 0 0 0 15px rgba(0, 0, 255, 0.15), 0 0 0 35px rgba(0, 0, 255, 0.125);
+    }
+
+    50%{
+        box-shadow: 0 0 0 60px rgba(0, 0, 255, 0.1), 0 0 0 85px rgba(0, 0, 255, 0.075);
+    }
+
+    75%{
+        box-shadow: 0 0 0 110px rgba(0, 0, 255, 0.05), 0 0 0 135px rgba(0, 0, 255, 0.025);
+    }
+
+    100%{
+        box-shadow: 0 0 0 160px rgba(0, 0, 255, 0), 0 0 0 185px rgba(0, 0, 255, 0);
+    }
+
+}
+
+@keyframes phone_rotate{
+
+    0%{
+        transform: rotate(0);
+    }
+
+    20%{
+        transform: rotate(18deg);
+    }
+
+    40%{
+        transform: rotate(-18deg);
+    }
+
+    60%{
+        transform: rotate(18deg);
+    }
+
+    80%{
+        transform: rotate(-18deg);
+    }
+
+    90%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
+
+}
